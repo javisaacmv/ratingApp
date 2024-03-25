@@ -1,0 +1,103 @@
+.Card{
+    width: 95%;
+    height: 85vh;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-top: 1rem;
+    border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform-origin: 50% 99%;
+}
+
+.Current{
+    display: block
+}
+
+.No_Current{
+    display: none
+}
+
+.Image{
+    width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.Image_Container{
+    height: 70%;
+    border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Card_Footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Red_Button{
+    width: 50px;
+    line-height: 50px;
+    background-color: #EF2345;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Green_Button{
+    width: 50px;
+    line-height: 50px;
+    background-color: #12C83A;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Button_Icon{
+    align-self: center;
+    color: white
+}
+
+.Description_Container{
+    margin: 10px
+}
+
+.yes{
+    animation: yay 0.7s ease-out;
+  }
+.no{
+    animation: nope 0.7s ease-out;
+  }
+
+@keyframes yay {
+    from {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: rotate(40deg) translateY(-80px);
+      opacity: 0;
+    }
+}
+
+@keyframes nope {
+    from {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(-40deg) translateY(-80px);
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* .Card_Content{
+        position:absolute
+    } */
+  }
