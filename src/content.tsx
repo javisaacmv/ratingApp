@@ -15,10 +15,7 @@ export const content = [
 
     name: "Koenigsegg Jesko",
     engine: "twin-turbocharged V8 engine",
-    description: `The Koenigsegg Jesko is a high-performance hypercar renowned for its cutting-edge engineering, including a powerful twin-turbo V8 engine, advanced aerodynamics, and lightweight construction. It's designed for blistering speeds and exceptional handling, representing the pinnacle of automotive performance and innovation.
-    
-    The Koenigsegg Jesko is a high-performance hypercar renowned for its cutting-edge engineering, including a powerful twin-turbo V8 engine, advanced aerodynamics, and lightweight construction. It's designed for blistering speeds and exceptional handling, representing the pinnacle of automotive performance and innovation.
-    `,
+    description: `The Koenigsegg Jesko is a high-performance hypercar renowned for its cutting-edge engineering, including a powerful twin-turbo V8 engine, advanced aerodynamics, and lightweight construction. It's designed for blistering speeds and exceptional handling, representing the pinnacle of automotive performance and innovation.`,
     img: jeskoImg,
     liked: false,
   },
