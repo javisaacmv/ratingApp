@@ -23,27 +23,30 @@ const App = () => {
     setContentArr(arr);
   };
 
-  console.log(contentArr);
-
   const next = () => {
     setCurrent(current + 1);
   };
   return (
     <>
       <div>
-        {/* <Drawer setShowing={setShowing} /> */}
         {showing === "home" && (
-          <div className="Card_Container">
-            {contentArr.map((car, i) => (
-              <CardComponent
-                current={i === current}
-                next={next}
-                car={car}
-                gotLiked={gotLiked}
-              />
-            ))}
-            {current >= content.length && <p>That's it!</p>}
-          </div>
+          <>
+            <div className="Card_Container">
+              {contentArr.map((car, i) => (
+                <CardComponent
+                  current={i === current}
+                  next={next}
+                  car={car}
+                  gotLiked={gotLiked}
+                />
+              ))}
+              {current >= content.length && (
+                <div className="No_Content_Text_Container">
+                  <p className="No_Content_Text">That's it!</p>
+                </div>
+              )}
+            </div>
+          </>
         )}
         {showing === "liked" && (
           <div className="Card_Container">
@@ -52,6 +55,13 @@ const App = () => {
               .map((car) => (
                 <CardComponent current={true} next={next} car={car} />
               ))}
+            {contentArr.filter((c) => c.liked).length === 0 && (
+              <div className="No_Content_Text_Container">
+                <p className="No_Content_Text">
+                  Start liking cars and they will appear here
+                </p>
+              </div>
+            )}
           </div>
         )}
       </div>

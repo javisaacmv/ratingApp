@@ -10,5 +10,20 @@ body {
   justify-content: flex-start;
   align-items: center;
   height: 120vh;
+  width: 100vw;
+
+}
+
+.No_Content_Text{
+  text-align: center;
+  color: black
+}
+
+.No_Content_Text_Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 

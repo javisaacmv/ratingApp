@@ -1,6 +1,6 @@
 .Card{
     width: 95%;
-    min-height: 85vh;
+    height: 80vh;
     border-radius: 10px;
     margin-top: 1rem;
   background-color: white;
@@ -72,6 +72,7 @@
 
 .Description_Container{
     margin: 10px;
+    overflow: scroll;
 }
 
 .Unlike_Icon{
