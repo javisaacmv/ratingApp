@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Drawer from "./components/DrawerComponent";
 import CardComponent from "./components/CardComponent";
 import { content } from "./content";
+import BottomTabs from "./components/BottomTabs";
 
 const App = () => {
   const [showing, setShowing] = useState<"home" | "liked">("home");
@@ -29,31 +29,34 @@ const App = () => {
     setCurrent(current + 1);
   };
   return (
-    <div>
-      <Drawer setShowing={setShowing} />
-      {showing === "home" && (
-        <div className="Card_Container">
-          {contentArr.map((car, i) => (
-            <CardComponent
-              current={i === current}
-              next={next}
-              car={car}
-              gotLiked={gotLiked}
-            />
-          ))}
-          {current >= content.length && <p>That's it!</p>}
-        </div>
-      )}
-      {showing === "liked" && (
-        <div className="Card_Container">
-          {contentArr
-            .filter((c) => c.liked)
-            .map((car) => (
-              <CardComponent current={true} next={next} car={car} />
+    <>
+      <div>
+        {/* <Drawer setShowing={setShowing} /> */}
+        {showing === "home" && (
+          <div className="Card_Container">
+            {contentArr.map((car, i) => (
+              <CardComponent
+                current={i === current}
+                next={next}
+                car={car}
+                gotLiked={gotLiked}
+              />
             ))}
-        </div>
-      )}
-    </div>
+            {current >= content.length && <p>That's it!</p>}
+          </div>
+        )}
+        {showing === "liked" && (
+          <div className="Card_Container">
+            {contentArr
+              .filter((c) => c.liked)
+              .map((car) => (
+                <CardComponent current={true} next={next} car={car} />
+              ))}
+          </div>
+        )}
+      </div>
+      <BottomTabs setShowing={setShowing} showing={showing} />
+    </>
   );
 };
 

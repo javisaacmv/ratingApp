@@ -1,11 +1,8 @@
 .Card{
     width: 95%;
     height: 85vh;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    margin-top: 1rem;
     border-radius: 10px;
+    margin-top: 1rem;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transform-origin: 50% 99%;
@@ -21,7 +18,7 @@
 
 .Image{
     width: 100%;
-  max-height: 100%;
+  height: 100%;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -29,7 +26,7 @@
 }
 
 .Image_Container{
-    height: 70%;
+    height: 50%;
     border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -38,33 +35,50 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 30px;
 }
 
-.Red_Button{
+.Unlike_Button{
     width: 50px;
-    line-height: 50px;
-    background-color: #EF2345;
-    text-align: center;
-    border-radius: 50px;
+    height: 50px;
+    text-align:center;
+    vertical-align:middle;
+    display:inline-block;
+    line-height: 55px;
+    border-radius: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    overflow: hidden;
 }
 
-.Green_Button{
+.Like_Button{
     width: 50px;
-    line-height: 50px;
-    background-color: #12C83A;
-    text-align: center;
-    border-radius: 50px;
+    height: 50px;
+    background-color: #F94144;
+    text-align:center;
+    vertical-align:middle;
+    display:inline-block;
+    line-height: 55px;
+    border-radius: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    overflow: hidden;
 }
 
-.Button_Icon{
-    align-self: center;
-    color: white
-}
+
 
 .Description_Container{
     margin: 10px
+}
+
+.Unlike_Icon{
+    color:#F94144;
+    line-height: inherit;
+}
+
+.Like_Icon{
+    color:white;
+    line-height: inherit;
 }
 
 .yes{
@@ -95,9 +109,3 @@
         opacity: 0;
     }
 }
-
-@media only screen and (min-width: 768px) {
-    /* .Card_Content{
-        position:absolute
-    } */
-  }

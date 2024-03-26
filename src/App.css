@@ -1,7 +1,14 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
 .Card_Container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 

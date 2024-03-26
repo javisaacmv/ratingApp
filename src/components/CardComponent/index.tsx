@@ -1,6 +1,7 @@
-import { FaCheck, FaTimes } from "react-icons/fa";
+import { FaHeart, FaTimes } from "react-icons/fa";
 import "./card.css";
 import { useState } from "react";
+import RippleButton from "../RippleButton";
 
 type Props = {
   current: boolean;
@@ -9,6 +10,7 @@ type Props = {
     id: number;
     name: string;
     engine: string;
+    description: string;
     img: string;
     liked: boolean;
   };
@@ -32,20 +34,24 @@ const CardComponent = ({ current, next, car, gotLiked }: Props) => {
       </div>
       <div className="Card_Content">
         <div className="Description_Container">
-          <p>{car.name}</p>
+          <h4>{car.name}</h4>
           <p>Engine: {car.engine}</p>
+          <p>{car.description}</p>
         </div>
         {gotLiked && (
           <div className="Card_Footer">
-            <div className="Red_Button" onClick={() => handleSetResult("no")}>
-              <FaTimes className="Button_Icon" />
-            </div>
-            <div
-              className="Green_Button"
-              onClick={() => handleSetResult("yes")}
+            <RippleButton
+              onClick={() => handleSetResult("no")}
+              className={`Unlike_Button`}
             >
-              <FaCheck className="Button_Icon" />
-            </div>
+              <FaTimes className="Unlike_Icon" />
+            </RippleButton>
+            <RippleButton
+              onClick={() => handleSetResult("yes")}
+              className={`Like_Button`}
+            >
+              <FaHeart className="Like_Icon" />
+            </RippleButton>
           </div>
         )}
       </div>
