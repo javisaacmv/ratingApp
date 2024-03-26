@@ -32,29 +32,27 @@ const CardComponent = ({ current, next, car, gotLiked }: Props) => {
       <div className="Image_Container">
         <img className="Image" src={car.img} />
       </div>
-      <div className="Card_Content">
-        <div className="Description_Container">
-          <h4>{car.name}</h4>
-          <p>Engine: {car.engine}</p>
-          <p>{car.description}</p>
-        </div>
-        {gotLiked && (
-          <div className="Card_Footer">
-            <RippleButton
-              onClick={() => handleSetResult("no")}
-              className={`Unlike_Button`}
-            >
-              <FaTimes className="Unlike_Icon" />
-            </RippleButton>
-            <RippleButton
-              onClick={() => handleSetResult("yes")}
-              className={`Like_Button`}
-            >
-              <FaHeart className="Like_Icon" />
-            </RippleButton>
-          </div>
-        )}
+      <div className="Description_Container">
+        <h4>{car.name}</h4>
+        <p>Engine: {car.engine}</p>
+        <p>{car.description}</p>
       </div>
+      {gotLiked && (
+        <div className="Card_Footer">
+          <RippleButton
+            onClick={() => handleSetResult("no")}
+            className={`Unlike_Button`}
+          >
+            <FaTimes className="Unlike_Icon" />
+          </RippleButton>
+          <RippleButton
+            onClick={() => handleSetResult("yes")}
+            className={`Like_Button`}
+          >
+            <FaHeart className="Like_Icon" />
+          </RippleButton>
+        </div>
+      )}
     </div>
   );
 };
